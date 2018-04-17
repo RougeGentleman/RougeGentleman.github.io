@@ -88,7 +88,7 @@ function showPoint_1(){
         for(var j=0; j<4; j++){
             if(_pointArray[i][j]!=0) {
                 _spanVar[i][j].innerText=""+_pointArray[i][j];
-                setStyle(_spanVar[i][j]);
+                setStyle_1(_spanVar[i][j], _pointArray[i][j]);
             }else{
                 _spanVar[i][j].innerText="";
                 setStyleBack((_spanVar[i][j]));
@@ -97,6 +97,42 @@ function showPoint_1(){
     }
 }
 
+
+//在原有的基础上添加，不同的分数，不同的背景色
+function setStyle_1(_var, _point){
+    if(_point==2){
+        _var.style.backgroundColor="#ece4d9";
+    }else if (_point==4){
+        _var.style.backgroundColor="#ece0c6";
+    }else if (_point==8){
+        _var.style.backgroundColor="#f2b179";
+    }else if (_point==16){
+        _var.style.backgroundColor="#f59562";
+    }else if (_point==32){
+        _var.style.backgroundColor="#f57c5f";
+    }else if (_point==64){
+        _var.style.backgroundColor="#f45e39";
+    }else if (_point==128){
+        _var.style.backgroundColor="#eccf71";
+    }else if (_point==256){
+        _var.style.backgroundColor="#eccc5f";
+    }else if (_point==512){
+        _var.style.backgroundColor="#ecc84e";
+    }else if (_point==1024){
+        _var.style.backgroundColor="#ecc84e";
+    }else if (_point==2048){
+        _var.style.backgroundColor="#ecc84e";
+    }else if (_point==4096){
+        _var.style.backgroundColor="#ecc84e";
+    }else if (_point==8192){
+        _var.style.backgroundColor="#ecc84e";
+    }else if (_point==16384){
+        _var.style.backgroundColor="#ecc84e";
+    }else{
+        _var.style.backgroundColor="#ecc84e";
+    }
+    _var.style.color="#000";
+}
 //设置已添加数字的id样式
 function setStyle(_var){
     _var.style.backgroundColor="#ecc84e";
@@ -157,10 +193,13 @@ function toLeft(){
             }
         }
     }
+    //叠加完成， 在随机位置添加数值
+    getPointRandom();
     //执行完成，进行显示改变的数值
     showPoint_1();
 }
 
+//上移方法
 function toUp(){
     for(var i=0; i<4; i++){
         for(var k=1; k<4;k++){
@@ -169,7 +208,7 @@ function toUp(){
                     if(_pointArray[g][i]==0){
                         _pointArray[g][i]=_pointArray[k][i];
                         _pointArray[k][i]=0;
-                    }else if(_pointArray[g][i]!=0 && _pointArray[g][i]==_pointArray[i][k]){
+                    }else if(_pointArray[g][i]!=0 && _pointArray[g][i]==_pointArray[k][i]){
                         _pointArray[g][i]+=_pointArray[k][i];
                         _pointArray[k][i]=0;
                     }
@@ -177,6 +216,8 @@ function toUp(){
             }
         }
     }
+    //叠加完成， 在随机位置添加数值
+    getPointRandom();
     //执行完成，进行显示改变的数值
     showPoint_1();
 }
@@ -195,15 +236,17 @@ function toRight(){
                         _pointArray[i][g]+=_pointArray[i][k];
                         _pointArray[i][k]=0;
                     }
-
                 }
             }
         }
     }
+    //叠加完成， 在随机位置添加数值
+    getPointRandom();
     //执行完成，进行显示改变的数值
     showPoint_1();
 }
 
+//下移方法
 function toDown(){
     for(var i=0; i<4; i++){
         for(var k=2; k>=0;k--){
@@ -221,10 +264,25 @@ function toDown(){
             }
         }
     }
+    //叠加完成， 在随机位置添加数值
+    getPointRandom();
     //执行完成，进行显示改变的数值
     showPoint_1();
 }
 
+//在随机位置添加数值
+//需要判断位置是否已满
+function getPointRandom(){
+    while(true){
+        var _x=Math.round(Math.random()*3);
+        var _y=Math.round(Math.random()*3);
+        if(_pointArray[_x][_y]==0){
+            _pointArray[_x][_y]=2;
+            break;
+        }
+    }
+
+}
 
 function _arrayToString(){
     var _string="";
