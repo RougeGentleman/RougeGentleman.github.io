@@ -4,30 +4,60 @@
     <meta charset="UTF-8">
     <title>网页版2048</title>
     <link rel="stylesheet" type="text/css" href="css/main.css"/>
-    <script type="text/javascript" src="js/main.js"></script>
-    <script type="text/javascript" src="js/demo.js"></script>
 </head>
 <body>
-<div class="main">
-    <span id="main_a1" onclick="_clearStyle(this)"></span>
-    <span id="main_a2"></span>
-    <span id="main_a3"></span>
-    <span id="main_a4"></span>
+<div class="container">
+    <div class="main">
+        <span id="main_a1"></span>
+        <span id="main_a2"></span>
+        <span id="main_a3"></span>
+        <span id="main_a4"></span>
 
-    <span id="main_b1"></span>
-    <span id="main_b2"></span>
-    <span id="main_b3"></span>
-    <span id="main_b4"></span>
+        <span id="main_b1"></span>
+        <span id="main_b2"></span>
+        <span id="main_b3"></span>
+        <span id="main_b4"></span>
 
-    <span id="main_c1"></span>
-    <span id="main_c2"></span>
-    <span id="main_c3"></span>
-    <span id="main_c4"></span>
+        <span id="main_c1"></span>
+        <span id="main_c2"></span>
+        <span id="main_c3"></span>
+        <span id="main_c4"></span>
 
-    <span id="main_d1"></span>
-    <span id="main_d2"></span>
-    <span id="main_d3"></span>
-    <span id="main_d4"></span>
+        <span id="main_d1"></span>
+        <span id="main_d2"></span>
+        <span id="main_d3"></span>
+        <span id="main_d4"></span>
+    </div>
+    <div class="tip">
+        <div class="tip_score">
+            <span class="tip_score_left">分数：</span><span id="score">0</span>
+        </div>
+        <div class="tip_run">
+            <div class="arrow_up">
+                <input id="upButton" type="button" value="↑">
+            </div>
+            <div class="arrow_mid">
+                <div class="arrow_left">
+                    <input id="leftButton" type="button" value="←">
+                </div>
+                <div class="arrow_right">
+                    <input id="rightButton" type="button" value="→">
+                </div>
+            </div>
+            <div class="arrow_down">
+                <input id="downButton" type="button" value="↓">
+            </div>
+        </div>
+        <div class="tip_bottom">
+            <div class="tip_reset">
+                <input id="resetButton" type="button" value="重置">
+            </div>
+            <div class="tip_start">
+                <input type="button" value="开始">
+            </div>
+        </div>
+    </div>
 </div>
+<script type="text/javascript" src="js/main_min.js"></script>
 </body>
 </html>

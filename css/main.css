@@ -4,13 +4,16 @@
 }
 body{
     background: #ece0c6;
-
+}
+.container{
+    width: 900px;
+    margin: 100px auto 20px auto;
 }
 .main{
     background: #baac9f;
     width: 480px;
     height: 480px;
-    margin: 100px auto 0px auto;
+    float: left;
 }
 .main span{
     background: #ccc0b2;
@@ -23,7 +26,89 @@ body{
     border-radius: 8px;
     float: left;
     display: inline-block;
-
     font-size: 20px;
     text-align: center;
+}
+.tip{
+    width: 400px;
+    margin-left: 20px;
+    float: right;
+    text-align: center;
+}
+.tip_score{
+    background: #f2b179;
+    width: 400px;
+    height: 100px;
+    color: #ffffff;
+    line-height: 100px;
+    font-size: 30px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+.tip_score_left{
+    float: left;
+    margin-left: 30px;
+}
+#score{
+    float: right;
+    margin-right: 30px;
+}
+.arrow_up{
+    width: 400px;
+    text-align: center;
+    margin-top: 30px;
+}
+.arrow_up input, .arrow_left input, .arrow_right input, .arrow_down input{
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    background: yellow;
+    border-radius: 50%;
+    border: 0px;
+    font-size: 24px;
+    outline:none;
+}
+.arrow_left{
+    width: 160px;
+    text-align: right;
+    margin-right: 30px;
+    display: inline-block;
+}
+.arrow_right{
+    width: 160px;
+    text-align: left;
+    margin-left: 30px;
+    display: inline-block;
+}
+.top_bottom{
+    width: 400px;
+    height: 50px;
+    text-align: center;
+}
+.tip_reset{
+  width: 150px;
+    height: 50px;
+    line-height: 50px;
+    text-align: right;
+    display: inline-block;
+    margin-right: 30px;
+}  
+.tip_start{
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    text-align: left;
+    display: inline-block;
+    margin-left: 30px;
+}
+.tip_reset input, .tip_start input{
+    width: 100px;
+    height: 50px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background: #eccf71;
+    border: 0px;
+    outline-color: #f59562;
 }

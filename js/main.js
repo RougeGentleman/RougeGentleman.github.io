@@ -1,32 +1,46 @@
 /*---------网页版2048------------*/
-/*
-*   试作：
-*   1. 初次运行
-*   a. 数据准备
-*
-*
-* */
-
-//标签变量
-var a1, a2, a3, a4;
-var b1, b2, b3, b4;
-var c1, c2, c3, c4;
-var d1, d2, d3, d4;
 
 // 用于存储每行每列的数值
 var _pointArray=Array([0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]);
 // 用于存储id变量的数组
 var _spanVar=Array(4, 4);
 // var _spanVar=Array([a1, a2, a3, a4], [b1, b2, b3, b4], [c1, c2, c3, c4], [d1, d2, d3, d4]);
+//该数组用于存放空白位置的坐标
+var _blankArray=Array([0, 0], [0, 0], [0, 0], [0, 0],
+    [0, 0], [0, 0], [0, 0], [0, 0],
+    [0, 0], [0, 0], [0, 0], [0, 0],
+    [0, 0], [0, 0], [0, 0], [0, 0]);
 
 // 用于生成数值时x y坐标
 var _x;
 var _y;
 
-// HTML已加载完成，开始执行开始函数
-window.onload=start;
+//用于显示总分数
+var totalScore=0;
+var scoreSpan;
 
-function start(){
+//上下左右按钮
+var leftButton;
+var rightButton;
+var upButton;
+var downButton;
+//重置按钮、开始按钮
+var resetButton;
+
+// HTML已加载完成，开始执行开始函数
+window.onload=pre;
+
+
+//准备函数
+//该函数在文档加载完成后执行
+//用于初始化需要的标签变量
+function pre(){
+    //标签变量
+    var a1, a2, a3, a4;
+    var b1, b2, b3, b4;
+    var c1, c2, c3, c4;
+    var d1, d2, d3, d4;
+
     //开始提取id，并进行赋值
     //第一行
     a1=document.getElementById("main_a1");
@@ -48,16 +62,30 @@ function start(){
     d2=document.getElementById("main_d2");
     d3=document.getElementById("main_d3");
     d4=document.getElementById("main_d4");
-
     _spanVar=Array([a1, a2, a3, a4], [b1, b2, b3, b4], [c1, c2, c3, c4], [d1, d2, d3, d4]);
 
-    //开始抽取数值
-    //模拟生成一次位置
-    getXY();
+    //获取显示分数标签
+    scoreSpan=document.getElementById("score");
 
+    //上下左右按钮
+    leftButton=document.getElementById("leftButton");
+    rightButton=document.getElementById("rightButton");
+    upButton=document.getElementById("upButton");
+    downButton=document.getElementById("downButton");
+    //重置、开始按钮
+    resetButton=document.getElementById("resetButton");
+
+    //设置点击事件
+    setOnclickEvent();
+
+    //开始游戏
+    start();
+}
+
+//开始今昔游戏函数
+function start(){
     //获取抽取的次数
     var count=Math.round(Math.random()*16);
-    // alert("count:"+count);
 
     //开始进行抽取，并进行存放
     for(var i=0; i<count; i++){
@@ -73,7 +101,6 @@ function start(){
         }
     }
     showPoint_1();
-    // _arrayToString();
 }
 
 //该方法用于：生成x y位置
@@ -89,6 +116,7 @@ function showPoint_1(){
             if(_pointArray[i][j]!=0) {
                 _spanVar[i][j].innerText=""+_pointArray[i][j];
                 setStyle_1(_spanVar[i][j], _pointArray[i][j]);
+                //更新总分数
             }else{
                 _spanVar[i][j].innerText="";
                 setStyleBack((_spanVar[i][j]));
@@ -187,6 +215,9 @@ function toLeft(){
                         _pointArray[i][k]=0;
                     }else if(_pointArray[i][g]!=0 && _pointArray[i][g]==_pointArray[i][k]){
                         _pointArray[i][g]+=_pointArray[i][k];
+                        //累加分数并进行显示
+                        totalScore+=_pointArray[i][g];
+                        showScore();
                         _pointArray[i][k]=0;
                     }
                 }
@@ -210,7 +241,10 @@ function toUp(){
                         _pointArray[k][i]=0;
                     }else if(_pointArray[g][i]!=0 && _pointArray[g][i]==_pointArray[k][i]){
                         _pointArray[g][i]+=_pointArray[k][i];
-                        _pointArray[k][i]=0;
+                        //累加分数
+                        totalScore +=_pointArray[g][i];
+                        //进行显示总分数
+                        showScore();
                     }
                 }
             }
@@ -234,6 +268,9 @@ function toRight(){
                         _pointArray[i][k]=0;
                     }else if(_pointArray[i][g]!=0 && _pointArray[i][g]==_pointArray[i][k]){
                         _pointArray[i][g]+=_pointArray[i][k];
+                        //累加分数并进行显示
+                        totalScore+=_pointArray[i][g];
+                        showScore();
                         _pointArray[i][k]=0;
                     }
                 }
@@ -258,6 +295,10 @@ function toDown(){
                         _pointArray[k][i]=0;
                     }else if(_pointArray[g][i]!=0 && _pointArray[g][i]==_pointArray[k][i]){
                         _pointArray[g][i]+=_pointArray[k][i];
+                        //累加分数
+                        totalScore +=_pointArray[g][i];
+                        //进行显示总分数
+                        showScore();
                         _pointArray[k][i]=0;
                     }
                 }
@@ -273,16 +314,62 @@ function toDown(){
 //在随机位置添加数值
 //需要判断位置是否已满
 function getPointRandom(){
-    while(true){
-        var _x=Math.round(Math.random()*3);
-        var _y=Math.round(Math.random()*3);
-        if(_pointArray[_x][_y]==0){
-            _pointArray[_x][_y]=2;
-            break;
+    //用于累加数组中空白位置
+    var _whiteCount=0;
+    //利用for循环获取所有空的位置，累加空的数量
+    //之后将这些空的位置添加到数组中
+    //最后利用空的数量随机生成位置
+    for(var i=0; i<4; i++){
+        for(var j=0; j<4; j++){
+            if(_pointArray[i][j]==0){
+                _blankArray[_whiteCount][0]=i;
+                _blankArray[_whiteCount][1]=j;
+                _whiteCount++;
+            }
         }
     }
-
+    //所有空白位置已累加，
+    //进行抽取并添加
+    //当已满时取消随机添加数
+    if(_whiteCount!=0){
+        // alert(_whiteCount);
+        var _add=Math.round(Math.random()*(_whiteCount-1));
+        _pointArray[_blankArray[_add][0]][_blankArray[_add][1]]=2;
+    }
 }
+
+//该方法用于在每次数字叠加时进行总分显示
+function showScore(){
+    scoreSpan.innerText=totalScore+"";
+}
+
+//该方法用于重置游戏数据并重新开始抽取数值
+function toReset(){
+    //将数组中分数清零
+    for(var i=0; i<4; i++){
+        for(var j=0; j<4; j++){
+            _pointArray[i][j]=0;
+        }
+    }
+    //重置总分数
+    totalScore=0;
+    //并重新显示分数
+    showScore();
+    //开始新的游戏
+    start();
+}
+
+//该方法用于设置点击事件
+function setOnclickEvent(){
+    //设置上下左右按钮点击事件
+    leftButton.onclick=toLeft;
+    rightButton.onclick=toRight;
+    upButton.onclick=toUp;
+    downButton.onclick=toDown;
+    //设置重置按钮点击事件
+    resetButton.onclick=toReset;
+}
+
 
 function _arrayToString(){
     var _string="";
