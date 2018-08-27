@@ -1,0 +1,9 @@
+$(()=>{
+    $(".header").load("header.html",function(){
+        $(".header-mid-home").find(".header-mask").css({
+            "height":"100%",
+            "width":"100%"
+        }).end().find("a").css("color","white");
+    });
+    $(".footer").load("footer.html");
+});

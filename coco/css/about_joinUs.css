@@ -1,0 +1,230 @@
+.about-joinUs-container{
+    background: #f2f2f2;
+    overflow: hidden;
+}
+.about-joinUs-item{
+    width: 1040px;
+    margin: 30px auto 0 auto;
+    background: #FFF;
+    padding: 30px;
+}
+.job-shortDes{
+    font-size: 13px;
+}
+.job-shortDes i{
+    font-size: 18px;
+    position: relative;
+    left: 3px;
+}
+.job-releaseDate,
+.job-companyAdd,
+.job-personCount{
+    margin-right: 8px;
+}
+.job-item-header{
+    border-bottom: 1px solid #e4eaec;
+}
+.job-name{
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+.job-shortDes{
+    color: #a3afb7;
+    padding-bottom: 8px;
+}
+.job-item-content{
+    margin-top: 20px;
+    line-height: 50px;
+    font-size: 14px;
+    font-weight: lighter;
+    color: rgb(34, 34, 34);
+    padding-bottom: 40px;
+    border-bottom: 1px solid #e4eaec;
+}
+.job-item-bottom{
+    margin-top: 20px;
+}
+.job-offerButton{
+    width: 90px;
+    height: 40px;
+    border: 1px solid #a3afb7;
+    font-size: 14px;
+    color: #a3afb7;
+    cursor: pointer;
+    transition: all 300ms;
+    outline: none;
+}
+.job-offerButton:hover{
+    color: #FFF;
+    background: #a3afb7;
+}
+.about-joinUs-bottom{
+    display: flex;
+    justify-content: center;
+    margin: 50px auto;
+    width: 1100px;
+}
+.about-joinUs-nextButton,
+.about-joinUs-previousButton{
+    width: 70px;
+    height: 30px;
+    border: 1px solid #e4eaec;
+    font-size: 14px;
+    color: #ccd5db;
+    outline: none;
+}
+.about-joinUs-toIndex{
+    margin-right: 8px;
+    height: 30px;
+    padding: 0 10px;
+    border: 1px solid #e4eaec;
+    background: #FFF;
+    color: #ccd5db;
+    outline: none;
+}
+.about-joinUs-previousButton + button{
+    margin-left: 8px;
+}
+.about-joinUs-toIndex-selected{
+    background: #a3afb7;
+    color: #FFF;
+}
+/*-------遮罩层, offer----------*/
+.about-joinUs-mask{
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 100;
+    overflow: auto;
+    display: none;
+}
+.about-joinUs-maskContainer{
+    display: flex;
+    flex-flow: column wrap;
+    width: 600px;
+    margin: 30px auto;
+    background: white;
+}
+.offer-header{
+    background: #1accc3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    font-size: 20px;
+    height: 58px;
+    color: #FFF;
+}
+.offer-closeButton,
+.offer-cancelButton{
+    cursor: pointer;
+}
+.offer-item{
+    margin: 15px 20px 0 20px;
+}
+.offer-item > input{
+    width: 550px;
+    padding-left: 10px;
+    height: 36px;
+    outline: none;
+    font-size: 15px;
+    color: #76838f;
+    border: 1px solid #e4eaec;
+    transition: all 500ms;
+}
+.offer-item > input::placeholder,
+.offer-item > textarea::placeholder{
+    color: #a3afb7;
+    font-size: 13px;
+}
+.offer-item > input:focus,
+.offer-item > textarea:focus{
+    border-color: #1accc3;
+}
+.offer-item > textarea{
+    width: 540px;
+    height: 100px;
+    outline: none;
+    padding: 10px;
+    font-size: 15px;
+    color: #76838f;
+    border-color: #e4eaec;
+    transition: all 500ms;
+}
+.offer-item1{
+    display: flex;
+    flex-flow: column wrap;
+}
+.offer-item1 p{
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+.offer-item1 p input{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+.offer-item2{
+    display: flex;
+    flex-flow: column wrap;
+}
+.offer-item2 div{
+    display: flex;
+    margin-top: 15px;
+}
+.offer-item2 div span{
+    display: flex;
+    flex: 0 0 36px;
+    width: 36px;
+    height: 36px;
+    background: #1accc3 url("../img/about_joinUs_offerUpload.png") no-repeat center center;
+    background-size: 24px;
+    border: 0;
+    overflow: hidden;
+}
+.offer-imgFile{
+    opacity: 0;
+    width: 36px;
+    height: 36px;
+}
+.offer-item2 div p{
+    display: flex;
+    flex: auto;
+    border: 1px solid #1accc3;
+}
+.offer-item3{
+    margin-bottom: 20px;
+}
+.offer-item3 button{
+    width: 60px;
+    height: 36px;
+    border: 0;
+    margin-right: 10px;
+    background: #1accc3;
+    color: #FFF;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+}
+.offer-item3 button:last-child{
+    color: #76838f;
+    background-color: #e4eaec;
+    transition: all 300ms;
+}
+.offer-item3 button:last-child:hover{
+    color: #76838f;
+    background-color: #f3f7f9;
+}
+
+.elementSlideInDown{
+    animation: slideInDown 800ms;
+}
+.elementSlideOutUp{
+    animation: slideOutUp 400ms;
+}

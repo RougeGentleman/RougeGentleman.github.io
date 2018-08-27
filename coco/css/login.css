@@ -1,0 +1,125 @@
+.header{
+    overflow: hidden;
+}
+.container{
+    width: 1100px;
+    margin: 0 auto;
+}
+.header-left{
+    float: left;
+}
+.header-left li{
+    float: left;
+    height: 60px;
+    line-height: 60px;
+    padding: 20px 0;
+    font-size: 20px;
+}
+.header-left li img{
+    margin-right: 30px;
+    cursor: pointer;
+}
+.header-left li:last-child span{
+    border-left: 3px solid #ddd;
+    padding-left: 20px;
+}
+.header-right{
+    float: right;
+    height: 60px;
+    line-height: 60px;
+    padding: 20px 0;
+}
+.header-right li span{
+    color: #337ab7;
+    cursor: pointer;
+    font-size: 14px;
+}
+.header-right li span:hover{
+    text-decoration: underline;
+    color: #23527c;
+}
+
+/* -------main---------- */
+.main{
+    background: url(../img/login_main_bg.jpg) no-repeat center center;
+    height: 445px;
+    overflow: hidden;
+}
+.main-content{
+    margin-top: 50px;
+    max-width: 340px;
+    padding: 30px;
+    background-color: rgba(255,255,255,.7);
+    overflow: hidden;
+}
+.main-content-name,
+.main-content-password,
+.main-content-login,
+.main-content-register{
+    display: flex;
+    flex-flow: column nowrap;
+}
+.main-content-name input,
+.main-content-password input,
+.main-content-login input,
+.main-content-register input{
+    flex: auto;
+    height: 40px;
+    display: inline-block;
+    font-size: 16px;
+    padding-left: 8px;
+    margin: 10px 0;
+}
+input::placeholder{
+    font-size: 14px;
+    color: #ccc;
+}
+.main-content-forget span{
+    float: right;
+    color: #23527c;
+    cursor: pointer;
+}
+.main-content-forget{
+    padding-bottom: 20px;
+    height: 20px;
+}
+.main-content-forget span:hover{
+    color: #23527c;
+    text-decoration: underline;
+}
+.main-content-login input{
+    background-color: #337ab7;
+    border: 0;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+.main-content-login input:hover{
+    color: #fff;
+    background-color: #286090;
+}
+.main-content-register input{
+    background-color: #5bc0de;
+    border: 0;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+.main-content-register input:hover{
+    color: #fff;
+    background-color: #31b0d5;
+}
+
+.inputError{
+    color: darkgoldenrod;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.footer{
+    padding: 30px 0;
+    text-align: center;
+    color: #777;
+    line-height: 24px;
+    font-size: 14px;
+}

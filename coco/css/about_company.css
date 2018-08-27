@@ -1,0 +1,72 @@
+.company-container{
+    width: 1100px;
+    margin: 0 auto;
+    font-family: "微软雅黑", "Microsoft YaHei";
+}
+.company-title, .company-culture-title{
+    text-align: center;
+    font-size: 24px;
+    margin: 30px 0;
+    font-weight: lighter;
+}
+.company-content{
+    padding-bottom: 50px;
+    border-bottom: 1px solid #eff0f3;
+    font-weight: lighter;
+}
+.company-content p{
+    font-size: 14px;
+    line-height: 30px;
+    margin-bottom: 15px;
+}
+.company-culture{
+    padding-bottom: 50px;
+}
+.company-culture-row1{
+    display: flex;
+    justify-content: center;
+}
+.company-culture-row1 li{
+    width: 220px;
+    height: 120px;
+    border-top: 1px solid rgb(228, 234, 236);
+    border-left: 1px solid rgb(228, 234, 236);
+    border-bottom: 1px solid rgb(228, 234, 236);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(243, 247, 249, 0.298039);
+}
+.company-culture-row1 li:last-child{
+    border-right: 1px solid rgb(228, 234, 236);
+}
+.company-culture-row2{
+    display: flex;
+    justify-content: center;
+}
+.company-culture-row2:hover{
+    background: #f3f7f9;
+}
+.company-culture-row2 li{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    width: 220px;
+    border-left: 1px solid rgb(228, 234, 236);
+    border-bottom: 1px solid rgb(228, 234, 236);
+    padding-top: 10px;
+}
+.company-culture-row2 li:last-child{
+    border-right: 1px solid rgb(228, 234, 236);
+}
+.company-culture-row2 li p{
+    font-size: 14px;
+    line-height: 50px;
+    font-weight: lighter;
+    color: #2a333c;
+    /*margin-left: 20px;*/
+}
+.company-culture-row2 li p:first-child{
+    font-size: 20px;
+    font-weight: normal;
+}

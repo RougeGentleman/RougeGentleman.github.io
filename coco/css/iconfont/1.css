@@ -1,0 +1,33 @@
+.icon-header-itemUp:before { content: "\e78f"; }
+
+.icon-header-itemDown:before { content: "\e791"; }
+
+.icon-left:before { content: "\e617"; }
+
+.icon-right:before { content: "\e638"; }
+
+.icon-footer-wechat:before { content: "\e600"; }
+
+.icon-footer-weibo:before { content: "\e601"; }
+
+.icon-footer-qq:before { content: "\e602"; }
+
+.icon-job-person:before { content: "\e629"; }
+
+.icon-job-companyAdd:before { content: "\e62c"; }
+
+.icon-job-salary:before { content: "\e647"; }
+
+.icon-job-offer-upload:before { content: "\e6ff"; }
+
+.icon-more:before { content: "\e635"; }
+
+.icon-gengduo:before { content: "\e63f"; }
+
+.icon-help-add:before { content: "\e60c"; }
+
+.icon-help-substract:before { content: "\e60d"; }
+
+.icon-list-see:before { content: "\e61a"; }
+
+.icon-article-search:before { content: "\e779"; }

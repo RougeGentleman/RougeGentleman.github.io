@@ -1,0 +1,54 @@
+.main-banner img{
+    width: 100%;
+}
+.content-menu{
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #eff0f3;
+}
+.content-menu li{
+    font-size: 16px;
+    margin: 0 10px;
+    height: 50px;
+    line-height: 50px;
+    cursor: pointer;
+}
+.content-menu li:hover{
+    color: #1accc3;
+}
+.content-container{
+    min-height: 100vh;
+}
+.content-menu-selected{
+    color: #1accc3;
+}
+
+/*--------元素动画函数-------*/
+.elementRotateInY{
+    animation: rotateInAnimation .75s;
+}
+.elementRotateOutY {
+    animation: rotateOutAnimation .75s;
+}
+
+@keyframes rotateOutAnimation {
+    from{
+        opacity: 1;
+        transform: rotateY(0);
+    }
+    to{
+        opacity: 0;
+        transform: rotateY(180deg);
+    }
+}
+
+@keyframes rotateInAnimation {
+    from{
+        opacity: 0;
+        transform: rotateY(180deg);
+    }
+    to{
+        opacity: 1;
+        transform: rotateY(0);
+    }
+}

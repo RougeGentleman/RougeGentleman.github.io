@@ -1,0 +1,66 @@
+.footer-wrap{
+    background: #000;
+}
+.footer-row1{
+    padding: 30px 0;
+}
+.footer-menu h3{
+    color: #FFF;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-bottom: 20px;
+}
+.footer-menu h3 > span:last-child{
+    font-size: 14px;
+}
+.footer-menu h3 > span:first-child{
+    cursor: pointer;
+}
+.footer-menu ul,
+.footer-menu > p{
+    color: #848581;
+}
+.footer-menu ul li{
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.footer-menu ul li:hover{
+    color: #FFF;
+}
+
+.footer-menu > p > span{
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-image: url("../img/icon-tb.png");
+    background-repeat: no-repeat;
+}
+.footer-item-icon1{
+    background-position: -5px -12px;
+}
+.footer-item-icon1:hover{
+    background-position: -5px -58px;
+}
+.footer-item-icon2{
+    background-position: -49px -12px;
+}
+.footer-item-icon2:hover{
+    background-position: -49px -57px;
+}
+.footer-item-icon3{
+    background-position: -87px -12px;
+}
+.footer-item-icon3:hover{
+    background-position: -87px -57px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px){
+    .col-xxl{
+        width: 50%;
+    }
+}
+
+@media (max-width: 320px){
+    .col-xxl{
+        width: 100%;
+    }
+}

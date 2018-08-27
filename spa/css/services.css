@@ -1,0 +1,230 @@
+.main > .container{
+    padding: 50px 0;
+}
+.container > h2{
+    color: #6EA145;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.row1{
+    text-align: center;
+}
+.row1-col > div:first-child   {
+    text-align: center;
+}
+.row1-img{
+    display: inline-block;
+    margin: 0 auto;
+    position: relative;
+}
+.row1-img img{
+    width: 100%;
+}
+.row1-img-mask{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 255, 0, 0.2);
+    border-radius: 50%;
+    display: none;
+}
+.row1-img-maskContainer{
+    display: flex;
+    height: 100%;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+}
+.row1-imgMask-title{
+    font-family: 'Josefin Sans', sans-serif;
+}
+.main-row1-title{
+    font-family: 'Josefin Sans', sans-serif;
+    color: #6EA145;
+}
+.learnMoreButton{
+    background: #6EA145;
+    border: 0;
+    color: #FFF;
+    font-size: 16px;
+    font-family: 'Josefin Sans', sans-serif;
+    outline: none;
+}
+.row1-button{
+    width: 120px;
+    height: 40px;
+}
+.row1-col{
+    margin-bottom: 30px;
+}
+.row1-col:hover .row1-img-mask{
+    display: block;
+}
+
+.main-banner{
+    background: url("../img/5.jpg") no-repeat center;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    position: relative;
+    margin-bottom: 30px;
+}
+.main-banner-content{
+    margin: auto;
+    padding: 80px 50px;
+}
+.main-banner-content li{
+    display: none;
+}
+.main-banner-title{
+    margin-bottom: 20px;
+    font-size: 4rem;
+    text-transform: capitalize;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.main-banner-bottomButtons{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+.main-banner-bottomButtons span{
+    display: inline-block;
+    width: 30px;
+    height: 6px;
+    border-radius: 3px;
+    background: white;
+    cursor: pointer;
+}
+.main-bottomItem-left{
+    display: flex;
+    flex: 1 1 20%;
+    justify-content: center;
+}
+.main-bottomItem-right{
+    display: flex;
+    flex-flow: column wrap;
+    flex: 1 1 80%;
+}
+.main-banner-bottomButtonSelected{
+    background: #6EA145 !important;
+}
+
+.main-bottom{
+    margin-bottom: 50px;
+}
+.main-bottom-itemContainer{
+    display: flex;
+    justify-content: space-between;
+    color: #C6C5C0;
+}
+.main-bottomItem-left{
+    font-size: 40px;
+}
+.main-bottomItem-title{
+    font-size: 2rem;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.main-bottomItem-des{
+    font-size: 1.5rem;
+}
+
+
+
+@keyframes opacityAnimation{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.main-banner-itemShow{
+    display: block !important;
+}
+.main-banner-bottomButtons span:nth-child(2){
+    margin: 0 4px;
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+    .row1-title, .row3-topContent-title{
+        font-size: 1.8rem;
+    }
+    .row1-subTitle,
+    .row2-title,
+    .row3-topContent-subtitle,
+    .row3-bottom-colTitle{
+        font-size: 1.5rem;
+    }
+    .row1-des, .row2-des,
+    .row3-topContent-des,
+    .row3-bottom-colDes{
+        line-height: normal;
+        font-size: 1rem;
+    }
+    .row1-right > button{
+        margin-top: 10px;
+        width: 100px;
+        height: 30px;
+    }
+    .row2-button{
+        margin: 15px 0;
+    }
+    html{
+        font-size: 7px !important;
+    }
+}
+
+@media (max-width: 767px){
+    .row1-left{
+        padding-right: 0;
+    }
+    .row1-right{
+        padding: 0;
+    }
+    .row1-title{
+        margin-top: 30px;
+    }
+    .row3-top-left{
+        padding-right: 15px;
+    }
+    .row3-top-right{
+        padding-left: 15px;
+    }
+    .row3-bottom-colTitle{
+        font-size: 1.5rem;
+    }
+    .row3-bottom-colDes{
+        font-size: 1.2rem;
+        line-height: normal;
+    }
+    .carousel-indicators{
+        bottom: 20px;
+    }
+    html{
+        font-size: 6px !important;
+    }
+}
+
+@media (max-width: 520px) {
+    html,body{
+        font-size: 10px;
+    }
+    .row3-topContent-title{
+        font-size: 2.5rem;
+    }
+    .row3-topContent-subtitle{
+        font-size: 2rem;
+    }
+    .row3-topContent-des{
+        line-height: normal;
+    }
+    
+    .main-banner-content{
+        padding: 40px 0;
+    }
+}

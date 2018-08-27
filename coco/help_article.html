@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>帮助 详细内容</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/iconfont/iconfont.css">
+    <link rel="stylesheet" href="css/help_article.css">
+    <script src="js/data.js"></script>
+    <script src="js/jquery-3.3.1.js"></script>
+</head>
+
+<body>
+    <div class="header"></div>
+    <div class="main">
+        <div class="main-banner">
+            <img src="img/help_list_img1.jpg" alt="">
+        </div>
+        <div class="main-container">
+            <div class="main-content">
+                <div class="main-content-left">
+                    <p class="question-title"></p>
+                    <p class="question-intro">
+                        <span class="question-date"></span>
+                        <span class="question-time"></span>
+                        <span class="question-see">
+                            <i class="iconfont icon-list-see"></i>
+                            <span></span>
+                        </span>
+                    </p>
+                    <div class="question-des">
+                    </div>
+                    <div class="main-content-bottomButtons">
+                        <button class="main-previousButton"></button>
+                        <button class="main-nextButton"></button>
+                    </div>
+                </div>
+                <div class="main-content-rightContaienr">
+                    <div class="main-content-right">
+                        <div class="content-right-search">
+                            <input type="search" class="right-input-search">
+                            <button class="right-input-submit">
+                                <i class="iconfont icon-article-search"></i>
+                            </button>
+                        </div>
+
+                        <div class="content-right-des">
+                            <div class="right-help" onclick="window.location.href='help_list.html?type=0&page=1'">帮助</div>
+                            <div class="right-problem show-more">
+                                <span class="right-problem-title">常见问题</span>
+                                <i class="iconfont icon-right"></i>
+                            </div>
+                            <ol class="right-problem-more">
+                                <li class="right-problem-all">
+                                    <span onclick="window.location.href='help_list.html?type=5&page=1'">全部</span>
+                                </li>
+                                <li class="right-problem-start">
+                                    <span onclick="window.location.href='help_list.html?type=2&page=1'">新手入门</span>
+                                </li>
+                                <li class="right-problem-use">
+                                    <span onclick="window.location.href='help_list.html?type=3&page=1'">产品使用知道</span>
+                                </li>
+                                <li class="right-problem-app">
+                                    <span onclick="window.location.href='help_list.html?type=4&page=1'">移动端热门问题</span>
+                                </li>
+                            </ol>
+                            <div class="right-update" onclick="window.location.href='help_list.html?type=1&page=1'">更新说明</div>
+                        </div>
+                        <div class="content-right-recommend">
+                            <p class="right-recommend-title">为你推荐</p>
+                            <div class="right-recommend-content">
+                                <p>
+                                    <span onclick="window.location.href = 'help_article.html?type=1&id=1'">系统报表优化</span>
+                                </p>
+                                <p>
+                                    <span onclick="window.location.href='help_article.html?type=1&id=2'">工单信息中关联通话录音</span>
+                                </p>
+                                <p>
+                                    <span onclick="window.location.href='help_article.html?type=1&id=3'">转接会话特殊标识</span>
+                                </p>
+                                <p>
+                                    <span onclick="window.location.href='help_article.html?type=1&id=4'">座席端发送消息支持撤回</span>
+                                </p>
+                                <p>
+                                    <span onclick="window.location.href='help_article.html?type=1&id=5'">座席端发送消息支持撤回</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer"></div>
+    <script src="js/help_article.js"></script>
+</body>
+
+</html>

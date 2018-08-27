@@ -1,0 +1,218 @@
+.header-wrap{
+    background: url("../img/banner.jpg") no-repeat center center;
+    height: 600px;
+    position: relative;
+    z-index: 999;
+}
+.header-container{
+    font-family: 'Josefin Sans', sans-serif;
+    position: relative;
+}
+.header-left{
+    float: left;
+    padding: 20px 10px 0px 10px;
+    background: #C6C5C0;
+    color: #FFF;
+}
+.header-left p:first-child{
+    font-size: 30px;
+}
+
+.header-mid{
+    width: 570px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+}
+.header-mid >  ul{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 400px;
+    color: #FFF;
+    font-size: 20px;
+    text-align: center;
+}
+
+.header-mid-normal li{
+    position: relative;
+    float: left;
+    width: 80px;
+}
+.header-mid-normal > li > a{
+    position: relative;
+    display: inline-block;
+    z-index: 999;
+    margin-top: 20px;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    color: #FFF;
+    text-align: center;
+    text-decoration: none;
+}
+.header-mid-normal a:hover + .header-mask{
+    height: 100%;
+    width: 100%;
+    transition: height 300ms;
+}
+.header-mid-normal > li > .header-mask{
+    background: #6EA145;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0;
+    width: 100%;
+    transition: all 300ms;
+}
+
+.header-mid-small{
+    display: none;
+}
+
+.header-mid-small > p{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.header-mid-small > p > span{
+    height: 50px;
+    line-height: 50px;
+    font-size: 25px;
+    width: 50px;
+    color: #FFF;
+    cursor: pointer;
+}
+.header-mid-smallMenu{
+    position: absolute;
+    width: 95%;
+    top: -200%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-size: 18px;
+    background: #fff;
+    overflow: hidden;
+    z-index: 9999;
+}
+.header-mid-smallMenu li{
+    padding-top: 5px;
+    position: relative;
+}
+.header-mid-smallMenu li a{
+    position: relative;
+    z-index: 5;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    line-height: 100%;
+    color: #000;
+    text-decoration: none;
+}
+.header-mid-smallMenu p:first-child span:first-child{
+    width: 45%;
+    text-align: right;
+    margin-right: 20px;
+}
+.header-mid-smallMenu a:hover{
+    color: #FFF;
+    transition: color 300ms;
+}
+.header-mid-smallMenu  li:hover > .header-mask{
+    height: 100%;
+    width: 100%;
+    float: right;
+    transition: width 300ms;
+}
+.header-mid-small > ul > li .header-mask{
+    background: #6EA145;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    transition: all 300ms;
+}
+
+.header-right{
+    float: right;
+    height: 100%;
+    margin-top: 40px;
+}
+.header-right > p > span{
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-image: url("../img/icon-tb.png");
+    background-repeat: no-repeat;
+}
+.footer-item-icon1{
+    background-position: -5px -12px;
+}
+.footer-item-icon1:hover{
+    background-position: -5px -58px;
+}
+.footer-item-icon2{
+    background-position: -49px -12px;
+}
+.footer-item-icon2:hover{
+    background-position: -49px -57px;
+}
+.footer-item-icon3{
+    background-position: -87px -12px;
+}
+.footer-item-icon3:hover{
+    background-position: -87px -57px;
+}
+
+.header-banner{
+    width: 50%;
+    height: 200px;
+    position: absolute;
+    top: 35%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    color: #FFF;
+    overflow: hidden;
+}
+.header-banner-title{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 30px;
+}
+.header-banner-des{
+    font-family: 'Open Sans', sans-serif !important;
+}
+.header-banner-learnButton{
+    background: #6EA145;
+    border: 0;
+    width: 100px;
+    height: 40px;
+    font-size: 16px;
+    font-family: 'Josefin Sans', sans-serif;
+    outline: none;
+}
+
+@media (max-width:655px) {
+    .header-mid{
+        width: auto;
+    }
+    .header-mid-normal{
+        display: none;
+    }
+    .header-mid-small{
+        display: block;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+}

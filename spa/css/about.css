@@ -1,0 +1,35 @@
+.main-row{
+    margin: 30px 0;
+}
+.row-img img{
+    width: 100%;
+}
+.row-des{
+    margin-top: 10%;
+    text-align: center;
+}
+.row-des h2{
+    font-family: 'Josefin Sans', sans-serif;
+    color: #fe1546;
+}
+.row-des p{
+    color: #9D989D;
+}
+.row-des1{
+    display: block;
+}
+.row-des2{
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .row-des1{
+        display: none;
+    }
+    .row-des2{
+        display: block;
+    }
+    .row-des{
+        margin-top: 0;
+    }
+}

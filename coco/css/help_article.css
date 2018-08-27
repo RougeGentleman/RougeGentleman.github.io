@@ -1,0 +1,221 @@
+.main-banner{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+}
+.main-banner img{
+    height: 350px;
+    width: 100%;
+}
+.main-container{
+    background: #f0f2f5;
+    padding: 30px;
+}
+.main-content{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.main-content-left{
+    display: flex;
+    flex-flow: column nowrap;
+    min-height: 600px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    background: #f0f2f5;
+}
+.question-title{
+    font-size: 35px;
+    margin: 30px 0 10px 20px;
+}
+
+.question-intro{
+    color: #a3afb7;
+    font-size: 14px;
+    font-weight: lighter;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 0 15px 20px;
+    border-bottom: 1px solid #000;
+}
+.question-time{
+    margin-right: 20px;
+}
+.question-see i{
+    font-size: 25px;
+    position: relative;
+    top: 4px;
+}
+.question-des{
+    display: flex;
+    flex-flow: row wrap;
+    flex: auto;
+    font-size: 15px;
+    font-weight: lighter;
+    color: #222;
+    padding: 20px 0 50px 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #222;
+}
+.question-des p{
+    line-height: 30px;
+    margin-bottom: 15px;
+    font-family: 微软雅黑, "Microsoft YaHei";
+    font-size: 14px;
+}
+.main-content-bottomButtons{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding:0 10px;
+}
+.main-content-bottomButtons button{
+    height: 40px;
+    padding: 0 10px;
+    border: 1px solid #666b6b;
+    background: rgba(0, 0, 0, 0);
+    color: #2a333c;
+    cursor: pointer;
+    outline: none;
+}
+.main-content-bottomButtons button:hover{
+    color: #1accc3;
+}
+.main-previousButton{
+    border-radius: 3px 0 0 3px;
+}
+.main-nextButton{
+    border-radius: 0 3px 3px 0;
+}
+
+.main-content-rightContainer{
+    display: flex;
+    min-height: 450px;
+}
+.main-content-right{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    flex: none;
+    width: 220px;
+    min-height: 450px;
+    padding: 20px;
+    background: #fff;
+    margin-left: 30px;
+    padding: 20px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+.content-right-search{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    height: 36px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+.right-input-search{
+    display: flex;
+    flex: auto;
+    width: 185px;
+    height: 36px;
+    padding: 0 10px;
+    border-radius: 18px 0 0 18px;
+    border-top: 1px solid #e4eaec;
+    border-left: 1px solid #e4eaec;
+    border-bottom: 1px solid #e4eaec;
+    border-right: 0;
+    outline: none;
+    font-size: 15px;
+}
+.right-input-submit{
+    display: flex;
+    flex: none;
+    justify-content: center;
+    align-items: center;
+    height: 36px;
+    width: 36px;
+    border-radius: 0 18px 18px 0;
+    border-top: 1px solid #e4eaec;
+    border-bottom: 1px solid #e4eaec;
+    border-left: 0;
+    border-right: 1px solid #e4eaec;
+    background: rgba(0, 0, 0, 0);
+    outline: none;
+    cursor: pointer;
+}
+.content-right-des{
+    display: flex;
+    flex-flow: column nowrap;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    font-size: 16px;
+    border-bottom: 1px solid #1accc3;
+}
+.content-right-des > div{
+    cursor: pointer;
+}
+.content-right-des > div:hover{
+    color: #1accc3;
+}
+.right-problem:hover > .right-problem-more{
+    color: #000;
+}
+.content-right-des-selected{
+    color: #1accc3;
+}
+.content-right-problem{
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+}
+.right-problem{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    font-size: 16px;
+    height: 50px;
+    line-height: 50px;
+}
+.right-problem-more{
+    list-style-type: circle;
+    font-size: 14px;
+    padding-left: 25px;
+    margin-bottom: 8px;
+}
+.right-problem-more li{
+    cursor: pointer;
+}
+.right-problem-more li:hover > span{
+    color: #1accc3;
+}
+.content-right-recommend{
+    width: 100%;
+}
+.right-recommend-title{
+    font-size: 16px;
+    height: 40px;
+    line-height: 40px;
+}
+.right-recommend-content{
+    border: 1px solid #e4eaec;
+    border-radius: 3px;
+}
+.right-recommend-content p{
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+    font-size: 14px;
+    border-bottom: 1px solid #e4eaec;
+    cursor: pointer;
+}
+.right-recommend-content p > span:hover{
+    color: #1accc3;
+}
+.right-recommend-content p:last-child{
+    border-bottom: 0px;
+}
